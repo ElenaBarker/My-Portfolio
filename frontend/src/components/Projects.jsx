@@ -1,5 +1,6 @@
 import React from 'react';
 import dejaReviewImg from '../dejaReviewImg.jpg';
+import farmAppImg from '../farmAppImg.jpg';
 
 const Projects = () => {
   const projects = [
@@ -43,9 +44,9 @@ const Projects = () => {
         </>
       ),
       toolsUsed: 'React, Node.js, PosgreSQL, MaterialUI',
-      githubLink: 'https://github.com/ElenaBarker/City-Farm-Volunteers-Booking-Calendar',
+      githubLink: 'https://github.com/ElenaBarker/City-Farm-Volunteers-Booking-Calendar-1',
       demoLink: 'https://pathway-city-farm-project-react.onrender.com/',
-      imageSrc: dejaReviewImg,
+      imageSrc: farmAppImg,
     },
   ];
 

@@ -55,18 +55,18 @@ const Projects = () => {
       {projects.map((project, index) => (
         <div
           key={index}
-          className="flex items-center justify-center mb-8 p-4 border rounded bg-white shadow-md"
+          className="flex flex-col lg:flex-row items-center justify-center mb-8 p-4 border rounded bg-white shadow-md"
         >
-          <div className="w-2/3 pr-4">
-            <h1 className="text-4xl font-bold mb-4">{project.name}</h1>
-            <p className="text-xl text-gray-700 mb-4">{project.description}</p>
-            <p className="text-lg text-gray-600 mb-4">Tools Used: {project.toolsUsed}</p>
+          <div className="w-full lg:w-2/3 pr-4">
+            <h1 className="text-2xl lg:text-4xl font-bold mb-2 lg:mb-4">{project.name}</h1>
+            <p className="text-base lg:text-lg text-gray-700 mb-4">{project.description}</p>
+            <p className="text-sm lg:text-base text-gray-600 mb-4">Tools Used: {project.toolsUsed}</p>
             <div className="flex mb-4">
               <a
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:underline mr-4"
+                className="text-blue-500 hover:underline mr-2 lg:mr-4"
               >
                 GitHub
               </a>
@@ -80,7 +80,7 @@ const Projects = () => {
               </a>
             </div>
           </div>
-          <div className="w-1/3">
+          <div className="w-full lg:w-1/3 mb-4 lg:mb-0">
             <img src={project.imageSrc} alt={project.name} className="w-full h-auto rounded" />
           </div>
         </div>

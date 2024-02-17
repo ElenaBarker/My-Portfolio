@@ -2,8 +2,8 @@ import React from 'react';
 
 const AboutMe = () => {
   return (
-    <div className="container mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
-      <div className="text-2xl mb-4 font-serif">
+    <div className="container mx-auto mt-10 p-4 lg:p-6 bg-white rounded-lg shadow-lg">
+      <div className="text-xl md:text-2xl lg:text-3xl mb-4 font-serif">
         <p className="mb-4">
           I am a motivated, confident, and enthusiastic professional with over 5 years of experience in the social sector. I am currently transitioning to a career in tech after successfully completing an intensive 12-month software development program at CodeYourFuture in London.
         </p>

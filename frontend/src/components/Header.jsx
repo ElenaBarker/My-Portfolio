@@ -12,7 +12,7 @@ const Header = () => {
     <header className="bg-gray-800 text-white py-4 md:py-8 font-serif">
       <nav className="container mx-auto flex flex-col md:flex-row items-center">
         <div className="flex items-center justify-between w-full md:w-auto mb-4 md:mb-0">
-          <Link to="/home" className="text-lg md:text-2xl font-bold">
+          <Link to="/home" className="text-lg md:text-xl mr-4">
             Home
           </Link>
           <button

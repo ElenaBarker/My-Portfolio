@@ -1,6 +1,13 @@
 import React from 'react';
+import { faReact, faNode} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import dejaReviewImg from '../dejaReviewImg.jpg';
 import farmAppImg from '../farmAppImg.jpg';
+import AuthOIcon from '../icons/AuthOLogo.png';
+import SupabaseIcon from '../icons/supabase-logo-vector.png';
+import MaterialUIIcon from '../icons/material_ui_icon.png';
+import TailwindCSSIcon from '../icons/tailwindcss_logo_icon_170649.png';
+import PostgreSQLIcon from '../icons/postgreSQL-logo.png'
 
 const Projects = () => {
   const projects = [
@@ -23,7 +30,7 @@ const Projects = () => {
           </ul>
         </>
       ),
-      toolsUsed: 'Auth0, React, Node.js, Supabase, Tailwind CSS',
+      toolsUsed: ['Auth0', 'React', 'Node.js', 'Supabase', 'Tailwind CSS'],
       githubLink: 'https://github.com/Abubakar-Meigag/FinalProject-DejaReview-teamUnity-Ldn10',
       demoLink: 'https://fp-deja-review-frontend.onrender.com/',
       imageSrc: dejaReviewImg,
@@ -43,13 +50,36 @@ const Projects = () => {
           </ul>
         </>
       ),
-      toolsUsed: 'React, Node.js, PosgreSQL, MaterialUI',
+      toolsUsed: ['React', 'Node.js', 'PostgreSQL', 'MaterialUI'],
       githubLink: 'https://github.com/ElenaBarker/City-Farm-Volunteers-Booking-Calendar-1',
       demoLink: 'https://pathway-city-farm-project-react.onrender.com/',
       imageSrc: farmAppImg,
     },
   ];
 
+  const toolIcons = {
+    React: faReact,
+    'Node.js': faNode,
+    Auth0: AuthOIcon,
+    MaterialUI: MaterialUIIcon,
+    Supabase: SupabaseIcon,
+    'Tailwind CSS': TailwindCSSIcon,
+    PostgreSQL: PostgreSQLIcon,
+  };
+
+  const renderTools = (tools) => (
+  <div className="flex items-center">
+    {tools.map((tool, index) => (
+      <span key={index} className="mr-4">
+        {typeof toolIcons[tool] === 'string' ? (
+          <img src={toolIcons[tool]} alt={tool} className="w-16 h-16" />
+        ) : (
+          <FontAwesomeIcon icon={toolIcons[tool]} size="3x" color={tool === 'React' ? '#61DAFB' : '#8CC84B'} />
+        )}
+      </span>
+    ))}
+  </div>
+);
   return (
     <div className="container mx-auto mt-8">
       {projects.map((project, index) => (
@@ -60,7 +90,9 @@ const Projects = () => {
           <div className="w-full lg:w-2/3 pr-4">
             <h1 className="text-2xl lg:text-4xl font-bold mb-2 lg:mb-4">{project.name}</h1>
             <p className="text-base lg:text-lg text-gray-700 mb-4">{project.description}</p>
-            <p className="text-sm lg:text-base text-gray-600 mb-4">Tools Used: {project.toolsUsed}</p>
+            <p className="text-sm lg:text-base text-gray-600 mb-4">
+              Tools Used: {renderTools(project.toolsUsed)}
+            </p>
             <div className="flex mb-4">
               <a
                 href={project.githubLink}

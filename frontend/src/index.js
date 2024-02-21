@@ -4,10 +4,6 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faReact, faNode } from "@fortawesome/free-brands-svg-icons";
-
-library.add(faReact, faNode);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

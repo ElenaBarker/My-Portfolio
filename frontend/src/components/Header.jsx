@@ -37,7 +37,7 @@ const Header = () => {
         <div className="md:flex-grow"></div>
         <div className="mt-4 md:mt-0">
           <a
-            href="/Elena_Barker_-_Software_Developer.pdf"
+            href="/Elena_Barker_-_Software_Developer@.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-lg md:text-xl"

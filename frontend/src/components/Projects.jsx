@@ -1,7 +1,7 @@
 import React from 'react';
 import { faReact, faNode} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import dejaReviewImg from '../dejaReviewImg.jpg';
+// import dejaReviewImg from '../dejaReviewImg.png';
 import farmAppImg from '../farmAppImg.jpg';
 import AuthOIcon from '../icons/AuthOLogo.png';
 import SupabaseIcon from '../icons/supabase-logo-vector.png';
@@ -33,7 +33,7 @@ const Projects = () => {
       toolsUsed: ['Auth0', 'React', 'Node.js', 'Supabase', 'Tailwind CSS'],
       githubLink: 'https://github.com/Abubakar-Meigag/FinalProject-DejaReview-teamUnity-Ldn10',
       demoLink: 'https://fp-deja-review-frontend.onrender.com/',
-      imageSrc: dejaReviewImg,
+      // imageSrc: dejaReviewImg,
     },
     {
       name: 'City Farm Volunteers Booking Calendar (individual project)',
